@@ -111,5 +111,8 @@ C:\wwwroot\chatgptbot\chatgptbot\obj\Debug\net5.0\chatgptbot.dll
 C:\wwwroot\chatgptbot\chatgptbot\obj\Debug\net5.0\ref\chatgptbot.dll
 C:\wwwroot\chatgptbot\chatgptbot\obj\Debug\net5.0\chatgptbot.pdb
 C:\wwwroot\chatgptbot\chatgptbot\obj\Debug\net5.0\chatgptbot.genruntimeconfig.cache
-C:\wwwroot\chatgptbot\chatgptbot\bin\Debug\net5.0\Microsoft.Bcl.AsyncInterfaces.dll
-C:\wwwroot\chatgptbot\chatgptbot\bin\Debug\net5.0\OpenAI_API.dll
+C:\wwwroot\chatgptbot\chatgptbot\bin\Debug\net5.0\OpenAI.dll
+C:\wwwroot\chatgptbot\chatgptbot\bin\Debug\net5.0\System.ClientModel.dll
+C:\wwwroot\chatgptbot\chatgptbot\bin\Debug\net5.0\System.Memory.Data.dll
+C:\wwwroot\chatgptbot\chatgptbot\bin\Debug\net5.0\System.Text.Encodings.Web.dll
+C:\wwwroot\chatgptbot\chatgptbot\bin\Debug\net5.0\System.Text.Json.dll

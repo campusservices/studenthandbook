@@ -13,8 +13,12 @@
         "packagesPath": "C:\\Users\\20003569\\.nuget\\packages\\",
         "outputPath": "C:\\wwwroot\\chatgptbot\\chatgptbot\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
           "C:\\Users\\20003569\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,6 +26,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -100,7 +105,7 @@
             },
             "OpenAI": {
               "target": "Package",
-              "version": "[1.11.0, )"
+              "version": "[2.1.0, )"
             },
             "Oracle.ManagedDataAccess.Core": {
               "target": "Package",

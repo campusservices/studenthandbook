@@ -8,5 +8,7 @@ namespace chatgptbot.Entities
     public class UserMessage
     {
         public string Text { get; set; }
+        public string ThreadId { get; set; }
+        public string AssistantId { get; set; }
     }
 }

@@ -14,6 +14,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Serilog;
 using ILogger = Serilog.ILogger;
+using chatgptbot.Configuration;
 
 namespace chatgptbot
 {
@@ -32,6 +33,8 @@ namespace chatgptbot
             using var logger = new LoggerConfiguration()
               .ReadFrom.Configuration(Configuration)
               .CreateLogger();
+
+            ConfigureCorsPolicies(services, Configuration, logger);
 
             services.AddControllers();
             services.AddSwaggerGen(c =>
@@ -60,13 +63,21 @@ namespace chatgptbot
             }
 
             app.UseRouting();
-
+            app.UseCors();
             app.UseAuthorization();
-
+           
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
             });
+        }
+        private static void ConfigureCorsPolicies(IServiceCollection services, IConfiguration configuration, ILogger logger)
+        {
+            logger.Information("Configuring CORS policies");
+            var userEndpointPolicyConfig = new UserEndpointCorsPolicyConfiguration(configuration, logger);
+            services.AddCors(userEndpointPolicyConfig.SetupAction);
+
+            logger.Information("CORS policies configured");
         }
     }
 }
