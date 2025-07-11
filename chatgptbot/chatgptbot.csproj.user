@@ -5,6 +5,6 @@
   </PropertyGroup>
   <PropertyGroup>
     <ActiveDebugProfile>chatgptbot</ActiveDebugProfile>
-    <NameOfLastUsedPublishProfile>C:\wwwroot\chatgptbot\chatgptbot\Properties\PublishProfiles\FolderProfile.pubxml</NameOfLastUsedPublishProfile>
+    <NameOfLastUsedPublishProfile>C:\wwwroot\studenthandbook\chatgptbot\Properties\PublishProfiles\FolderProfile.pubxml</NameOfLastUsedPublishProfile>
   </PropertyGroup>
 </Project>

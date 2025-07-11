@@ -28,9 +28,9 @@ namespace chatgptbot.Configuration
                             AllowAnyMethod().AllowAnyHeader().WithOrigins(
                                                                          "http://localhost:3000",
                                                                            "http://localhost:44337",
-                                                                           "https://cavehillmaps.cavehill.uwi.edu",
+                                                                           "https://cms.cavehill.uwi.edu",
                                                                            "http://owl4:8080"
-                                                                           )
+                                                                           ).AllowCredentials()
                                )             
             );
             

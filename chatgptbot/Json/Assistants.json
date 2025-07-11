@@ -1,0 +1,47 @@
+[
+      {
+        "id": 1,
+        "assistantid": "asst_ki1pFw9rPGAQTsRC7cToHKal",
+        "faculty": "THE STUDENT HANDBOOK"
+      },
+      {
+        "id": 2,
+        "assistantid": "asst_1ofsTE3hDxUHG2hZCvgxo2ln",
+        "faculty": "CULTURE, CREATIVE AND PERFORMING ARTS"
+      },
+      {
+        "id": 3,
+        "assistantid": "asst_PzBjSUim44X7ZqLJkswy2kNP",
+        "faculty": "HUMANITIES AND EDUCATION"
+      },
+      {
+        "id": 4,
+        "assistantid": "asst_yodHcjs5xa034fgIHJvaHe00",
+        "faculty": "LAW"
+      },
+      {
+        "id": 4,
+        "assistantid": "asst_uBF0t0plzM0PFAiqyY6ONsw4",
+        "faculty": "MEDICAL SCIENCES"
+      },
+      {
+        "id": 5,
+        "assistantid": "asst_xItAyhbDl9MBBPmbnBXb2Mbd",
+        "faculty": "SCIENCE AND TECHNOLOGY"
+      },
+      {
+        "id": 6,
+        "assistantid": "asst_kD6rjaEk0OY2vdmG2mpMaEFY",
+        "faculty": "SOCIAL SCIENCES"
+      },
+      {
+        "id": 7,
+        "assistantid": "asst_PH7ObA3kz6x6MDSAbsygiBMs",
+        "faculty": "SPORTS"
+      },
+      {
+        "id": 8,
+        "assistantid": "asst_i7LM2FVz5VZrGXUIyGSfTKlI",
+        "faculty": "SEARCH ALL"
+      }
+]

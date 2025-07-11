@@ -1,0 +1,51 @@
+# Ignore Visual Studio solution user options
+*.suo
+
+# User-specific files
+*.user
+*.userosscache
+*.sln.docstates
+
+# Build output directories
+bin/
+obj/
+
+# Publish output
+wwwroot/
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# IDE-specific files
+.vscode/
+.idea/
+
+# Rider IDE
+*.sln.iml
+
+# Logs and reports
+*.log
+*.tlog
+*.cache
+
+# NuGet
+*.nupkg
+*.snupkg
+packages/
+
+# DotNet specific
+project.lock.json
+project.fragment.lock.json
+artifacts/
+*.runtimeconfig.dev.json
+
+# Additional tooling
+*.vs/
+.vs/chatgptbot/
+_ReSharper*/
+chatgptbot/obj/
+chatgptbot/bin/
+
+# Or all appsettings files (if needed — use with caution)
+appsettings*.json

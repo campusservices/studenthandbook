@@ -24,5 +24,7 @@ namespace chatgptbot.Services.Interface
         public Task<String> GetThreadMessagesAsync(string threadId);
         public Task CheckAssistantFilesAsync(string assistantId);
         public Task AddMessageWithFileSearchAsync(string threadId, string msg);
+        public Task<string> getDiscussion(string threadId);
+        public Task<string> sendMail(string body, string toEmail);
     }
 }

@@ -5,11 +5,8 @@ using System.Threading.Tasks;
 
 namespace chatgptbot.Entities
 {
-    public class UserMessage
+    public class CurrentAssistant
     {
-        public string Text { get; set; }
-        public string ThreadId { get; set; }
         public string AssistantId { get; set; }
-        public string ConnectionId { get; set; }
     }
 }

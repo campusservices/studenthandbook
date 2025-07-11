@@ -12,14 +12,15 @@ using System.Threading.Tasks;
 using UglyToad.PdfPig;
 using UglyToad.PdfPig.Content;
 using OpenAI;
+using OpenAI.Assistants;
 using System.IO;
 using Microsoft.AspNetCore.Http;
 using chatgptbot.Exceptions;
 using System.Net.Http.Headers;
-using System.Text.Json;
 using System.Text.Json.Nodes;
 using chatgptbot.dto;
 using System.Text.RegularExpressions;
+using System.Net.Mail;
 
 namespace chatgptbot.Services
 {
@@ -479,7 +480,65 @@ namespace chatgptbot.Services
             Console.WriteLine($"Message added with multiple file searches: {responseContent}");
         }
 
+        public async Task<string> getDiscussion(string threadId)
+        {
+            //_httpClient.GetAsync($"https://api.openai.com/v1/threads/{threadId}/messages
+            var response = await _httpClient.GetAsync($"https://api.openai.com/v1/threads/{threadId}/messages");
 
-    }
+            if (!response.IsSuccessStatusCode)
+            {
+                throw new Exception($"Failed to retrieve messages: {response.StatusCode}");
+            }
+
+            var content = await response.Content.ReadAsStringAsync();
+            var json = JObject.Parse(content);
+
+            var messages = json["data"]
+                .Reverse() // newest messages are first; reverse to show in order
+                .Select(msg => $"{msg["role"].ToString().ToUpper()}:\n{msg["content"]?[0]?["text"]?["value"]?.ToString()}\n")
+                .ToList();
+           
+            string cleaned = Regex.Replace("【4:0†source】【4:1†source】", "【\\d+:\\d+†source】", string.Empty);
+            return string.Join("\n", messages);
+            
+        }
+
+        public Task<string> sendMail(string body, string toEmail)
+        {
+
+            var smtpClient = new SmtpClient("smtp.cavehill.uwi.edu")
+            {
+                Port = 25,
+                EnableSsl = true
+            };
+
+            var mailMessage = new MailMessage
+            {
+                From = new MailAddress("webteam@cavehill.uwi.edu"),
+                Subject = "Cave Hill ChatBot Discussion",
+                Body = body,
+                IsBodyHtml = true,
+            };
+
+            mailMessage.To.Add(toEmail);
+
+            try
+            {
+                smtpClient.Send(mailMessage);
+                Console.WriteLine("Email sent successfully!");
+                return Task.FromResult("Email sent successfully!");
+            }
+            catch (SmtpException ex)
+            {
+                Console.WriteLine($"SMTP Error: {ex.Message}");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"General Error: {ex.Message}");
+            }
+
+            return Task.FromResult("Email sent successfully!");
+        }
+}
 
 }
